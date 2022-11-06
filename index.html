@@ -93,14 +93,29 @@
 					<h1 class="heading text-white mb-2" data-aos="fade-up">Give a helping hand to those who need it!</h1>
 					<p data-aos="fade-up" class=" mb-5 text-white lead text-white-50">Social justice is a broad term that affects many areas of public policy and public administration, including healthcare, gender equality, reproductive rights, education, employment and voting.</p>
 					<p data-aos="fade-up"  data-aos-delay="100">
-						<a href="#" class="btn btn-primary me-4 d-inline-flex align-items-center"> <span class="icon-attach_money me-2"></span><span>Donate Now</span></a> 
+						<!-- <a href="#" class="btn btn-primary me-4 d-inline-flex align-items-center"> <span class="icon-attach_money me-2"></span><span>Donate Now</span></a>  -->
+						<div id="donate-button-container">
+							<div id="donate-button" ></div>
+							<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+							<script>
+							PayPal.Donation.Button({
+							env:'production',
+							hosted_button_id:'D3KKLBRQF8YHU',
+							image: {
+							src:'https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif',
+							alt:'Donate with PayPal button',
+							title:'PayPal - The safer, easier way to pay online!',
+							}
+							}).render('#donate-button');
+							</script>
+							</div>
 						<a href="#" class="text-white glightbox d-inline-flex align-items-center"><span class="icon-play me-2"></span><span>Watch the video</span></a>
 					</p>		
 					
 				</div>
 
 				<div class="col-lg-5">
-					<form action="#" class="bg-white p-5 rounded donation-form" data-aos="fade-up">
+					<form action="#" class="bg-white p-5 rounded donation-form" data-aos="fade-up" style="position: relative;">
 						<h3>Quick Donation Form</h3>
 						<div class="form-field mb-3">
 							<label for="amount-1" class="amount js-amount" data-value="1.00">
@@ -131,7 +146,20 @@
 							<input type="email" placeholder="Email" class="form-control px-4">
 						</div>
 
-						<input type="submit" value="Donate now" class="btn btn-secondary w-100">
+						<div type="submit" id="donate-button">
+							<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+							<script>
+							PayPal.Donation.Button({
+							env:'production',
+							hosted_button_id:'D3KKLBRQF8YHU',
+							image: {
+							src:'https://pics.paypal.com/00/s/NDY3MTA3ZDEtM2MxOS00YTNlLWJkODMtNTFlYjQyY2E0ZGUy/file.PNG',
+							alt:'Donate with PayPal button',
+							title:'PayPal - The safer, easier way to pay online!',
+							}
+							}).render('#donate-button');
+							</script>
+							</div>
 					</form>
 				</div>
 			</div>

@@ -9945,3 +9945,28 @@ blockquote {
     color: rgba(255, 255, 255, 0.5); }
     .copyright a:hover {
       color: #fff; }
+
+
+
+
+
+#donate-button{
+  position: absolute;
+  bottom: 95px;
+  right: 45px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 720px) {
+  #donate-button{
+    bottom: 40px;
+    right: 38px;
+  }
+}
+
+/* @media screen and (max-width: 480px) {
+  #donate-button{
+    bottom: 95px;
+    right: 38px;
+  }
+} */
